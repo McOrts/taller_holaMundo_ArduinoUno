@@ -27,23 +27,7 @@ Taller práctico y didáctico de introducción a Arduino UNO. En este taller apr
 
 ### Descripción de pines
 
-```
-                         ┌──────────────────────────────────┐
-                         │         Arduino UNO R3            │
-     DIGITAL PWM (~)     │                                   │
-     ┌────────────────────────────────────────────────────┐  │
-     │  D0(RX) D1(TX) D2 D3~ D4 D5~ D6~ D7 D8 D9~ D10~ D11~ D12 D13 │
-     └────────────────────────────────────────────────────┘  │
-     ANALOG IN                                               │
-     ┌───────────────────────────┐                           │
-     │  A0  A1  A2  A3  A4(SDA) A5(SCL) │                   │
-     └───────────────────────────┘                           │
-     POWER                                                   │
-     ┌──────────────────────────────┐                        │
-     │  IOREF RESET 3.3V 5V GND GND Vin │                   │
-     └──────────────────────────────┘                        │
-                         └──────────────────────────────────┘
-```
+<img src="docs/img/Front-UNOQ-full-pinout.jpg" align="center"/>
 
 > **Nota I2C:** En el Arduino UNO, el bus I2C utiliza los pines **A4 (SDA)** y **A5 (SCL)**.
 
@@ -142,7 +126,7 @@ La librería es necesaria para comunicarse con el sensor SA.01.
 
 ### Diagrama de conexión en protoboard
 
-<img src="img/ArduinoUNO_SolidState_Anemometer_bb.png" width="600" align="center" />
+<img src="docs/img/ArduinoUNO_SolidState_Anemometer_bb.png" width="600" align="center" />
 
 ### Pasos para el montaje
 
