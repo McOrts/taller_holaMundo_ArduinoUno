@@ -27,7 +27,7 @@ Taller práctico y didáctico de introducción a Arduino UNO. En este taller apr
 
 ### Descripción de pines
 
-<img src="docs/img/Front-UNOQ-full-pinout.jpg" align="center"/>
+<img src="docs/img/ArduinoUNO_pinout.png" align="center"/>
 
 > **Nota I2C:** En el Arduino UNO, el bus I2C utiliza los pines **A4 (SDA)** y **A5 (SCL)**.
 
