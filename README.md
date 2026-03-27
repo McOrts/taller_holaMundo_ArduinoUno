@@ -2,6 +2,8 @@
 
 Taller práctico y didáctico de introducción a Arduino UNO. En este taller aprenderás a configurar el entorno de desarrollo, cargar tu primer sketch y conectar el anemómetro de estado sólido WindQX SA.01 para leer velocidad del viento y temperatura ambiente.
 
+En una segunda parte añadiremos un servo motor modificando el programa con la ayuda de la Inteligencia Artificial.
+
 ---
 
 ## 🔌 Arduino UNO — Pinout y características
@@ -66,6 +68,41 @@ La librería es necesaria para comunicarse con el sensor SA.01.
 
 ---
 
+## 🔧 Conectar del sensor WindQX SA.01
+
+### Lista de materiales
+
+- [Arduino UNO R3](https://store.arduino.cc/products/arduino-uno-rev3)
+- [Anemómetro de estado sólido WindQX SA.01 de ECDSL](https://ecdsl.com/en/categoria-producto/windqx/)
+- Cables Dupont macho/macho (4 cables)
+- Cable USB tipo B para programar el Arduino
+
+### Tabla de conexiones
+
+| Cable WindQX SA.01 | Color | Pin Arduino UNO |
+|---|---|---|
+| Alimentación negativa (−) | Negro | GND |
+| Alimentación positiva (+) | Rojo | 5V |
+| SCL | Blanco | A5 (SCL) |
+| SDA | Amarillo | A4 (SDA) |
+
+### Diagrama de conexión en protoboard
+
+<img src="docs/img/ArduinoUNO_SolidState_Anemometer_bb.png" width="600" align="center" />
+
+### Pasos para el montaje (Con ProtoBoard)
+
+1. Conecta el cable **negro** (−) del sensor al carril **GND** de la protoboard, y este carril al pin **GND** del Arduino UNO.
+2. Conecta el cable **rojo** (+) del sensor al carril **5V** de la protoboard, y este carril al pin **5V** del Arduino UNO.
+3. Conecta el cable **blanco** (SCL) del sensor directamente al pin **A5** del Arduino UNO.
+4. Conecta el cable **amarillo** (SDA) del sensor directamente al pin **A4** del Arduino UNO.
+5. Conecta el Arduino UNO al ordenador mediante el cable USB.
+6. Abre el Monitor Serie y comprueba las lecturas.
+
+> **Nota:** El sensor WindQX SA.01 utiliza el protocolo **I2C** (Inter-Integrated Circuit) para comunicarse con el Arduino. Asegúrate de que las conexiones SDA y SCL son correctas para evitar lecturas erróneas.
+
+---
+
 ## 📂 Cargar y compilar el sketch en el Arduino UNO
 
 ### Paso 1 — Abrir el sketch
@@ -114,40 +151,9 @@ La librería es necesaria para comunicarse con el sensor SA.01.
 
 ---
 
-## 🔧 Conexión del sensor WindQX SA.01
+## Montaje final
 
-### Lista de materiales
-
-- [Arduino UNO R3](https://store.arduino.cc/products/arduino-uno-rev3)
-- [Anemómetro de estado sólido WindQX SA.01 de ECDSL](https://ecdsl.com/en/categoria-producto/windqx/)
-- Cables Dupont macho/macho (4 cables)
-- Cable USB tipo B para programar el Arduino
-
-### Tabla de conexiones
-
-| Cable WindQX SA.01 | Color | Pin Arduino UNO |
-|---|---|---|
-| Alimentación negativa (−) | Negro | GND |
-| Alimentación positiva (+) | Rojo | 5V |
-| SCL | Blanco | A5 (SCL) |
-| SDA | Amarillo | A4 (SDA) |
-
-### Diagrama de conexión en protoboard
-
-<img src="docs/img/ArduinoUNO_SolidState_Anemometer_bb.png" width="600" align="center" />
-
-### Pasos para el montaje (Con ProtoBoard)
-
-1. Conecta el cable **negro** (−) del sensor al carril **GND** de la protoboard, y este carril al pin **GND** del Arduino UNO.
-2. Conecta el cable **rojo** (+) del sensor al carril **5V** de la protoboard, y este carril al pin **5V** del Arduino UNO.
-3. Conecta el cable **blanco** (SCL) del sensor directamente al pin **A5** del Arduino UNO.
-4. Conecta el cable **amarillo** (SDA) del sensor directamente al pin **A4** del Arduino UNO.
-5. Conecta el Arduino UNO al ordenador mediante el cable USB.
-6. Abre el Monitor Serie y comprueba las lecturas.
-
-> **Nota:** El sensor WindQX SA.01 utiliza el protocolo **I2C** (Inter-Integrated Circuit) para comunicarse con el Arduino. Asegúrate de que las conexiones SDA y SCL son correctas para evitar lecturas erróneas.
-
----
+<img src="docs/img/MontajeFinal.png" align="center"/>
 
 ## 📚 Recursos adicionales
 
