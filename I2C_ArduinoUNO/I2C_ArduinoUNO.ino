@@ -1,36 +1,42 @@
 /*******************************************************************
-  This is a basic example sketch to show the working of this library:
-  Download the library here: https://github.com/McOrts/WindQX_SolidState_Anemometer
-  For these devices: https://ecdsl.com/en/categoria-producto/windqx/
-  Author: McOrts (Carlos Orts)
-  Date : January 2026
- * ****************************************************************
-  Pinout connection for Arduino UNO
+  Este es un sketch de ejemplo básico para mostrar el funcionamiento
+  de esta librería:
+  Descarga la librería aquí:
+  https://github.com/McOrts/WindQX_SolidState_Anemometer
 
-  WindQX SA.01 pin | Arduino UNO pin
-    - (black)      | GND
-    + (red)        | 5V
-   SCL (white)     | PIN 5 (SCL)
-   SDA (yellow)    | PIN 4 (SDA)
+  Para estos dispositivos:
+  https://ecdsl.com/en/categoria-producto/windqx/
+
+  Autor: McOrts (Carlos Orts)
+  Fecha: enero de 2026
+ * ****************************************************************
+  Conexión de pines para Arduino UNO
+
+  Pin del WindQX SA.01 | Pin de Arduino UNO
+    - (negro)          | GND
+    + (rojo)           | 5V
+   SCL (blanco)        | PIN 5 (SCL)
+   SDA (amarillo)      | PIN 4 (SDA)
  * *****************************************************************/
 #include "WindQX.h"
 
-// Create a sensor object
+// Crear un objeto sensor
 WindQX SA01;
 
 void setup() {
   Serial.begin(115200);
-  SA01.Initialize("I2C");  // Init WindQX SA01 sensor
+  SA01.Initialize("I2C");  // Inicializar el sensor WindQX SA01
   Serial.println(SA01.getStatus());
 }
 
 void loop() {
-  if (SA01.getData() == "OK") {                  // get All data from WindQX device
-    float temperature = SA01.getTemperature();  // return temperature in celsius
-    float wind = SA01.getWind();                // return wind speed in Km/h
-    Serial.print(wind, 1);
+  if (SA01.getData() == "OK") {                  // Obtener todos los datos del dispositivo WindQX
+    float temperatura = SA01.getTemperature();   // Devuelve la temperatura en grados Celsius
+    float viento = SA01.getWind();               // Devuelve la velocidad del viento en km/h
+
+    Serial.print(viento, 1);
     Serial.print(" km/h, ");
-    Serial.print(temperature, 2);
+    Serial.print(temperatura, 2);
     Serial.println("°C");
   } else {
     Serial.println(SA01.getStatus());
