@@ -103,16 +103,24 @@ La librería es necesaria para comunicarse con el sensor SA.01.
 ...
 ```
 
+### Paso 6 — Añadir servo con IA
+
+1. Abre una consulta a ChatGPT
+2. Y escribe un 'prompt' parecido a este:
+<img src="docs/img/ChatGPT.png" align="center"/>
+
+3. Copia todo el programa de la contestación y pégalo en el editor de Arduino IDE
+4. Repite el paso 4
+
 ---
 
-## 🔧 Conexión del sensor WindQX SA.01 en protoboard
+## 🔧 Conexión del sensor WindQX SA.01
 
 ### Lista de materiales
 
 - [Arduino UNO R3](https://store.arduino.cc/products/arduino-uno-rev3)
 - [Anemómetro de estado sólido WindQX SA.01 de ECDSL](https://ecdsl.com/en/categoria-producto/windqx/)
-- Protoboard
-- Cables Dupont (4 unidades)
+- Cables Dupont macho/macho (4 cables)
 - Cable USB tipo B para programar el Arduino
 
 ### Tabla de conexiones
@@ -128,7 +136,7 @@ La librería es necesaria para comunicarse con el sensor SA.01.
 
 <img src="docs/img/ArduinoUNO_SolidState_Anemometer_bb.png" width="600" align="center" />
 
-### Pasos para el montaje
+### Pasos para el montaje (Con ProtoBoard)
 
 1. Conecta el cable **negro** (−) del sensor al carril **GND** de la protoboard, y este carril al pin **GND** del Arduino UNO.
 2. Conecta el cable **rojo** (+) del sensor al carril **5V** de la protoboard, y este carril al pin **5V** del Arduino UNO.
